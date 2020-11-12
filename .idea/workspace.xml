@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="04ab0cce-3a83-4dcb-8ce8-50433771ffdc" name="Default Changelist" comment="" />
+    <list default="true" id="04ab0cce-3a83-4dcb-8ce8-50433771ffdc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rnd" beforeDir="false" afterPath="$PROJECT_DIR$/.rnd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/admin/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +40,9 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -140,8 +173,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\OSPanel\OpenServer\domains\landing\app\Http\Requests\admin" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -160,24 +200,61 @@
       <workItem from="1604736213746" duration="5013000" />
       <workItem from="1604742465623" duration="2074000" />
       <workItem from="1604764076704" duration="44000" />
+      <workItem from="1604983076011" duration="4965000" />
+      <workItem from="1605064820791" duration="4783000" />
+      <workItem from="1605072312769" duration="9322000" />
+      <workItem from="1605156391615" duration="7065000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="-965" y="253" key="#Notifications" timestamp="1604764085304">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-965" y="253" key="#Notifications/-1440.0.1440.860/0.0.1920.1040@-1440.0.1440.860" timestamp="1604764085304" />
+    <state x="-1323" y="327" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605180924579">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1323" y="327" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605180924579" />
+    <state x="-1230" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605158071678">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1230" y="272" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605158071678" />
     <state x="-990" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604737188277">
       <screen x="-1440" y="0" width="1440" height="860" />
     </state>
     <state x="-990" y="184" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1440.0.1440.860/0.0.1920.1040@-1440.0.1440.860" timestamp="1604737188277" />
-    <state x="-1057" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1604764117241">
-      <screen x="-1440" y="0" width="1440" height="860" />
+    <state x="-1459" y="170" key="SettingsEditor" timestamp="1605157411382">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1459" y="170" key="SettingsEditor/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605157411382" />
+    <state x="-1253" y="229" width="585" height="592" key="find.popup" timestamp="1605091007772">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1253" y="229" width="585" height="592" key="find.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605091007772" />
+    <state x="-1304" y="243" key="run.anything.popup" timestamp="1605157671489">
+      <screen x="-1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="-1304" y="243" key="run.anything.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605157671489" />
+    <state x="-1409" y="220" width="896" height="828" key="search.everywhere.popup" timestamp="1605185206447">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
     <state x="-1057" y="180" width="672" height="678" key="search.everywhere.popup/-1440.0.1440.860/0.0.1920.1040@-1440.0.1440.860" timestamp="1604764117241" />
+    <state x="-1409" y="220" width="896" height="828" key="search.everywhere.popup/-1920.0.1920.1050/0.0.1920.1050@-1920.0.1920.1050" timestamp="1605185206447" />
   </component>
 </project>

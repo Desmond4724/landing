@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\UserController;
-
+use App\Http\Controllers\admin\CarouselController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,6 +17,12 @@ use App\Http\Controllers\admin\UserController;
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
 
+Route::group(['middleware' => 'auth'], function () {
+   Route::post('/upload-file', [\App\Http\Controllers\FileController::class, 'uploadFile']);
+});
 
-Route::group(["middleware" => 'auth'], function () {
+Route::group(["middleware" => 'auth', "prefix" => 'admin'], function () {
+    Route::resource('/carousel', CarouselController::class);
+    Route::get('/me', [UserController::class, 'me']);
+
 });

@@ -8,6 +8,7 @@ use App\Http\Requests\admin\UserRegisterRequest;
 use App\Models\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -41,5 +42,12 @@ class UserController extends Controller
             }
         }
         return response()->json('fail', 500);
+    }
+
+
+    public function me () {
+        return \response([
+            "data" => Auth::user()
+        ]);
     }
 }
