@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         DB::table('roles')->insert(['name' => 'admin']);
-         \App\Models\User::factory(1)->create();
+        \App\Models\User::factory(1)->create();
+        $this->call([InfoSeeder::class]);
     }
 }

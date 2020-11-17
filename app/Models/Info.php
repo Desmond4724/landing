@@ -5,21 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class Carousel
- * @property $image
+ * Class Info
  * @package App\Models
+ * @property $image
  */
-class Carousel extends Model
+class Info extends Model
 {
-
-    protected $fillable = ['title', "description", "image"];
+    protected $fillable = ['image', 'title', 'content'];
 
     protected $appends = ['image_url'];
+
+    protected $primaryKey = 'id';
 
     public function getImageUrlAttribute()
     {
         return asset('storage/' . $this->image);
     }
-
 
 }

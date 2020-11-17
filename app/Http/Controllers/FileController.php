@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FileRequest;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
@@ -11,6 +13,24 @@ class FileController extends Controller
     {
         $file = $request->file('file');
         $path_file = Storage::put('files', $file);
-        return response(asset('storage/' . $path_file));
+        return response([
+            'file_url' => asset('storage/' . $path_file),
+            'file' => $path_file
+        ]);
+    }
+
+    /**
+     * @param Request $request
+     * @return Response
+     */
+
+    public function deleteFile(Request $request)
+    {
+        $request->validate(["path" => "required"]);
+        Storage::delete($request->path);
+        return response([
+            "message" => 'successfully deleted' . ' file ' . $request->path
+        ]);
+
     }
 }

@@ -15,13 +15,11 @@ class CarouselController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return Response
      */
     public function index()
     {
-        $carousel = Carousel::query()->simplePaginate();
+        $carousel = Carousel::query()->paginate();
         return CarouselResource::collection($carousel);
-
     }
 
     /**
@@ -32,9 +30,7 @@ class CarouselController extends Controller
      */
     public function store(CarouselRequest $request)
     {
-        $image = $request->file('image');
         $data = $request->all();
-        $data['image'] = Storage::put('public/files', $image);
         $carousel = new Carousel($data);
         $carousel->save();
         return new  CarouselResource($carousel);
@@ -44,7 +40,7 @@ class CarouselController extends Controller
      * Display the specified resource.
      *
      * @param Carousel $carousel
-     * @return Response
+     * @return CarouselResource
      */
     public function show(Carousel $carousel)
     {
@@ -54,9 +50,9 @@ class CarouselController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return Response
+     * @param CarouselRequest $request
+     * @param Carousel $carousel
+     * @return CarouselResource
      */
     public function update(CarouselRequest $request, Carousel $carousel)
     {
@@ -74,6 +70,7 @@ class CarouselController extends Controller
      */
     public function destroy(Carousel $carousel)
     {
+        Storage::delete($carousel->image);
         if ($carousel->delete()) {
             return \response([
                 "message" => "Deleted successfully",

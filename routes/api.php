@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\admin\CarouselController;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\admin\InfoController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -17,12 +20,19 @@ use App\Http\Controllers\admin\CarouselController;
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/register', [UserController::class, 'register']);
 
-Route::group(['middleware' => 'auth'], function () {
-   Route::post('/upload-file', [\App\Http\Controllers\FileController::class, 'uploadFile']);
+
+Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
+
+
+Route::group(["middleware" => "auth"], function () {
+    Route::post('/upload-file', [FileController::class, 'uploadFile']);
+    Route::delete('/delete-file', [FileController::class, 'deleteFile']);
+    Route::group(['prefix' => 'admin'], function () {
+        Route::resource('/carousel', CarouselController::class);
+        Route::get('/me', [UserController::class, 'me']);
+        Route::put('/info', [InfoController::class, 'update']);
+        Route::get('/info', [InfoController::class, 'show']);
+    });
 });
 
-Route::group(["middleware" => 'auth', "prefix" => 'admin'], function () {
-    Route::resource('/carousel', CarouselController::class);
-    Route::get('/me', [UserController::class, 'me']);
-
-});
+http://192.168.45.25/storage/files/XhTsrJIKXVN2I9YepqGUFVhOpntRFBkqcvGcdogF.jpeg

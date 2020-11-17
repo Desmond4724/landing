@@ -4,7 +4,7 @@ namespace App\Http\Requests\admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CarouselRequest extends FormRequest
+class InfoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,17 +23,10 @@ class CarouselRequest extends FormRequest
      */
     public function rules()
     {
-        $is_method_post = $this->method() === 'POST';
-        $rules = [
-            'title' => ['string'],
-            "description" => ['string'],
-            "image" => ['string']
+        return [
+            'title' => "required|string",
+            'image' => "required|string",
+            "content" => "required|string"
         ];
-        if($is_method_post) {
-            $rules['title'][1] = 'required';
-            $rules['image'][1] = 'required';
-        }
-
-        return $rules;
     }
 }
