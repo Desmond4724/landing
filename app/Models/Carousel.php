@@ -21,5 +21,7 @@ class Carousel extends Model
         return asset('storage/' . $this->image);
     }
 
+    protected $hidden = ['created_at', 'updated_at'];
+
 
 }

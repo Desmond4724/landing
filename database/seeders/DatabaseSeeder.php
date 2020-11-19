@@ -16,6 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('roles')->insert(['name' => 'admin']);
         \App\Models\User::factory(1)->create();
-        $this->call([InfoSeeder::class]);
+        $this->call([
+            InfoSeeder::class,
+            SocialSeeder::class
+        ]);
     }
 }

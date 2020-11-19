@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Resources\Carousel;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Passport\Passport;
 

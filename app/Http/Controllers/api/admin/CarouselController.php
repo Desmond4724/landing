@@ -1,16 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\api\admin;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\api\ApiController;
 use App\Http\Requests\admin\CarouselRequest;
 use App\Models\Carousel;
-use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use \App\Http\Resources\Carousel as CarouselResource;
 use Illuminate\Support\Facades\Storage;
 
-class CarouselController extends Controller
+class CarouselController extends ApiController
 {
     /**
      * Display a listing of the resource.
@@ -61,18 +59,12 @@ class CarouselController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Carousel $carousel
-     * @return Response
-     * @throws \Exception
-     */
+
     public function destroy(Carousel $carousel)
     {
         Storage::delete($carousel->image);
         if ($carousel->delete()) {
-            return \response([
+            return response([
                 "message" => "Deleted successfully",
                 "data" => null
             ]);

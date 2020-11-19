@@ -1,10 +1,15 @@
 <?php
 
+use App\Http\Controllers\api\admin\EmployeeController;
+use App\Http\Controllers\api\admin\FeatureController;
+use App\Http\Controllers\api\admin\ServiceController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\UserController;
-use App\Http\Controllers\admin\CarouselController;
+use App\Http\Controllers\api\admin\UserController;
+use App\Http\Controllers\api\admin\CarouselController;
 use App\Http\Controllers\FileController;
-use App\Http\Controllers\admin\InfoController;
+use App\Http\Controllers\api\admin\InfoController;
+use App\Http\Controllers\api\admin\PortfolioController;
+use App\Http\Controllers\api\admin\QuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,10 +34,23 @@ Route::group(["middleware" => "auth"], function () {
     Route::delete('/delete-file', [FileController::class, 'deleteFile']);
     Route::group(['prefix' => 'admin'], function () {
         Route::resource('/carousel', CarouselController::class);
+        Route::resource('/features', FeatureController::class);
+        Route::resource('/portfolios', PortfolioController::class);
         Route::get('/me', [UserController::class, 'me']);
         Route::put('/info', [InfoController::class, 'update']);
         Route::get('/info', [InfoController::class, 'show']);
+        Route::resource('/services', ServiceController::class);
+        Route::resource('/questions', QuestionController::class);
+        Route::resource('/employees', EmployeeController::class);
     });
+
+
 });
 
-http://192.168.45.25/storage/files/XhTsrJIKXVN2I9YepqGUFVhOpntRFBkqcvGcdogF.jpeg
+
+Route::fallback(function () {
+    return response()->json([
+        "message" => "Api not found"
+    ]);
+});
+
