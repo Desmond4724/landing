@@ -8,8 +8,6 @@ use App\Http\Requests\admin\UserLoginRequest;
 use App\Http\Requests\admin\UserRegisterRequest;
 use App\Models\User;
 use Carbon\Carbon;
-use http\Env\Response;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,12 +16,15 @@ class UserController extends Controller
     private function getResponse($user)
     {
         $token = $user->createToken('access token');
+        $expires_at = Carbon::parse(
+            $token->token->expires_at
+        )->timestamp;
+        $expires_at = $expires_at - Carbon::now()->timestamp;
+
         return response()->json([
             "data" => $user,
             "access_token" => $token->accessToken,
-            "expires_at" => Carbon::parse(
-                $token->token->expires_at
-            )->toDateTimeString()
+            "expires_at" => $expires_at
         ]);
     }
 
@@ -66,8 +67,7 @@ class UserController extends Controller
     public function me()
     {
         $user = Auth::user();
-        $user->load('role');
-        return \response([
+        return response([
             "data" => $user
         ]);
     }

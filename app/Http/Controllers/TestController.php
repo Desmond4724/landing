@@ -14,13 +14,18 @@ class TestController extends Controller
     {
         $user = User::first();
         $token = $user->createToken('personal access token');
+        $expires_at = Carbon::parse(
+            $token->token->expires_at
+        )->timestamp;
+
+        $now = Carbon::now()->timestamp;
+        $expires_at = $expires_at - $now;
+
+        $expires_at = $expires_at/(1000*60*60);
         $data = [
             "access_token" => $token->accessToken,
-            "expires_at" => Carbon::parse(
-                $token->token->expires_at
-            )->toDateTimeString()
+            "expires_at" => $expires_at
         ];
         dd($data);
-
     }
 }
