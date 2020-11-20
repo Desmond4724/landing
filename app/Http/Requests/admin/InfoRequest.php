@@ -26,7 +26,13 @@ class InfoRequest extends FormRequest
         return [
             'title' => "required|string",
             'image' => "required|string",
-            "content" => "required|string"
+            "content" => "required|string",
+            "phone" => "required|string|max:20",
+            "email" => "required|email",
+            "address" => "required|min:10",
+            "lat" => "required|numeric",
+            "lng" => "required|numeric",
+            "telegram" => "required|string|min:15"
         ];
     }
 }

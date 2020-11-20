@@ -3,7 +3,6 @@
 namespace App\Providers;
 
 use Carbon\Carbon;
-use Carbon\Exceptions\BadComparisonUnitException;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Laravel\Passport\Passport;
 
@@ -26,6 +25,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
-        Passport::personalAccessTokensExpireIn(Carbon::now()->addHours(10));
+        Passport::personalAccessTokensExpireIn(Carbon::now()->addHours(8));
+        Passport::refreshTokensExpireIn(Carbon::now()->addHours(10));
     }
 }

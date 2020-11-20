@@ -19,7 +19,13 @@ class InfoResource extends JsonResource
             "title" => $this->title,
             "content" => $this->content,
             "image" => $this->image,
-            "image_url" => $this->image_url
+            "image_url" => $this->image_url,
+            "phone" => $this->phone,
+            "email" => $this->email,
+            "address" => $this->address,
+            "lat" => $this->lat,
+            "lng" => $this->lng,
+            "telegram" => $this->telegram
         ];
     }
 }

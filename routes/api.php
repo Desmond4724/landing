@@ -10,6 +10,7 @@ use App\Http\Controllers\FileController;
 use App\Http\Controllers\api\admin\InfoController;
 use App\Http\Controllers\api\admin\PortfolioController;
 use App\Http\Controllers\api\admin\QuestionController;
+use App\Http\Controllers\api\site\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,9 +44,9 @@ Route::group(["middleware" => "auth"], function () {
         Route::resource('/questions', QuestionController::class);
         Route::resource('/employees', EmployeeController::class);
     });
-
-
 });
+
+Route::get('/index', [IndexController::class, 'index']);
 
 
 Route::fallback(function () {

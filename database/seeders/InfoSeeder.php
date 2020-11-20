@@ -17,7 +17,13 @@ class InfoSeeder extends Seeder
         DB::table('infos')->insert([
             "title" => "title",
             "content" => "content",
-            "image" => "image"
+            "image" => "image",
+            "phone" => "998889",
+            "email" => "admin@gmail.com",
+            "address" => "Tashkent Uzbekistan",
+            "lat" => 100,
+            "lng" => 100,
+            "telegram" => "https://tg.me/test"
         ]);
     }
 }

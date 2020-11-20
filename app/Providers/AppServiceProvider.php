@@ -2,7 +2,8 @@
 
 namespace App\Providers;
 
-use App\Http\Resources\Carousel;
+use App\Models\Carousel;
+use App\Observers\CarouselObserver;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Passport\Passport;
 
@@ -25,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Carousel::observe(CarouselObserver::class);
     }
 }

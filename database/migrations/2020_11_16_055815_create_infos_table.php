@@ -18,6 +18,12 @@ class CreateInfosTable extends Migration
             $table->string('title');
             $table->text('content');
             $table->string('image', 100);
+            $table->string('phone');
+            $table->string('email');
+            $table->string('address');
+            $table->smallInteger('lat');
+            $table->smallInteger('lng');
+            $table->string('telegram');
             $table->timestamps();
         });
     }
