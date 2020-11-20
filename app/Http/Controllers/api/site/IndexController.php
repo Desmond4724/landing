@@ -31,8 +31,6 @@ class IndexController extends ApiController
         $data['portfolio'] = PortfolioResource::collection(Portfolio::all());
         $data['services'] = ServiceResource::collection(Service::all());
         $data['employees'] = EmployeeResource::collection(Employee::all());
-
-
         return $this->successResponse($data);
     }
 }
