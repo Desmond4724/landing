@@ -14,6 +14,6 @@ class Employee extends Model
 
     public function socials()
     {
-        return $this->belongsToMany(Social::class);
+        return $this->belongsToMany(Social::class, EmployeeSocial::class);
     }
 }

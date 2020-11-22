@@ -17,15 +17,21 @@ class SocialSeeder extends Seeder
     {
         DB::table('socials')->insert([
             "title" => "phone",
-            'value' => "phone"
+            'icon' => "phone",
+            'created_at' => now(),
+            'updated_at'=> now()
         ]);
         DB::table('socials')->insert([
             "title" => "email",
-            'value' => "email"
+            'icon' => "email",
+            'created_at' => now(),
+            'updated_at'=> now()
         ]);
         DB::table('socials')->insert([
             "title" => "telegram",
-            'value' => "telegram"
+            'icon' => "telegram",
+            'created_at' => now(),
+            'updated_at'=> now()
         ]);
     }
 }
