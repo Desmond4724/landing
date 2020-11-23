@@ -32,7 +32,7 @@ class UserController extends Controller
     {
 
         $user = new User($request->all());
-
+        $user['role_id'] = 1;
         $user->password = Hash::make($user->password);
         if ($user->save()) {
             return $this->getResponse($user);
